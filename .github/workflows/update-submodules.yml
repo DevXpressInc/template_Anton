@@ -21,9 +21,9 @@ jobs:
 
     - name: Update the specific submodule to latest
       run: |
-        cd newTemplate
+        cd Anton123xx/newTemplate
         git pull origin main  # Adjust the branch if needed
         cd ../../
-        git add template
+        git add Anton123xx/template
         git commit -m "Update submodule to latest commit"
         git push
