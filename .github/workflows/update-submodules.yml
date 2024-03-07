@@ -21,5 +21,6 @@ jobs:
 
     - name: Update the specific submodule to latest
       run: | 
-        ls Anton123xx/newTemplate
+        cd ../../../
+        ls 
         
