@@ -22,8 +22,6 @@ jobs:
     - name: Update the specific submodule to latest
       run: |
         cd Anton123xx/newTemplate/template
-        git pull origin main  # Adjust the branch if needed
-        cd ../../
-        git add Anton123xx/newTemplate/template
+        git submodule update --remote --recursive
         git commit -m "Update submodule to latest commit"
         git push
