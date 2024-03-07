@@ -21,6 +21,6 @@ jobs:
 
     - name: Update the specific submodule to latest
       run: | 
-        cd ../
+        cd ../../
         ls 
         
