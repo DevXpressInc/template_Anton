@@ -2,8 +2,7 @@ name: Update Submodule
 
 on:
   push:
-    branches:
-      - main  # Adjust this to the branch you want to trigger the update on
+    paths: template
   pull_request:
 
 jobs:
@@ -22,7 +21,5 @@ jobs:
 
     - name: Update the specific submodule to latest
       run: | 
-        git submodule update --remote --recursive
-        git commit -m "Update submodule to latest commit"
-        git push
+        git submodule update --init --recursive
         
