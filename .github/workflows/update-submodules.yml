@@ -1,0 +1,29 @@
+name: Update Submodule
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to the branch you want to trigger the update on
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repo with submodules
+      uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
+
+    - name: Configure git
+      run: |
+        git config user.name 'Anton123xx'
+        git config user.email 'rem248ssem@gmail.com'
+
+    - name: Update the specific submodule to latest
+      run: |
+        cd newTemplate
+        git pull origin main  # Adjust the branch if needed
+        cd ../../
+        git add template
+        git commit -m "Update submodule to latest commit"
+        git push
