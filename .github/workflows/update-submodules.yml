@@ -2,7 +2,9 @@ name: Update Submodule
 
 on:
   push:
+    branches: -main
     paths: template
+
   pull_request:
 
 jobs:
