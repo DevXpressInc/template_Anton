@@ -12,7 +12,7 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v3
         with:
-        
+          token: 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 
           repository: Anton123xx/newTemplate # Format: Organization/Repository
           event-type: update-template
           
